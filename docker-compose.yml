@@ -48,7 +48,7 @@ services:
     container_name: flyway
     restart: always
     depends_on:
-      postgres
+      - postgres
     # Load environment variables
     environment:
       - FLYWAY_URL=jdbc:postgresql://postgres:5432/postgres?currentSchema=public
